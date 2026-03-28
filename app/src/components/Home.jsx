@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import About from './About';
-import '../components/css/Home.css'; 
+import React from 'react'
+import About from './About'
 
 const Home = () => {
   const [count, setCount] = useState(0);
@@ -13,41 +12,11 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="container">
-
-      {/* Navbar */}
-      <nav className="navbar">
-        <h2 className="logo">My App</h2>
-        <div className="nav-links">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-        </div>
-      </nav>
-
-      {/* Content */}
-      <h1 className="title">Welcome to the Home Page</h1>
-      <p className="text">This is a simple paragraph on the home page.</p>
-
-      {/* Counter */}
-      <h3>Counter: {count}</h3>
-      <button className="btn btn-inc" onClick={() => setCount(count + 1)}>
-        Increase
-      </button>
-      <button className="btn btn-dec" onClick={() => setCount(count - 1)}>
-        Decrease
-      </button>
-
-      {/* Users */}
-      <h2>User List</h2>
-      <ul className="user-list">
-        {users.map(user => (
-          <li key={user.id}>{user.name}</li>
-        ))}
-      </ul>
-
-      {/* About */}
-      <About name="Saravanan" role="Frontend Developer" />
-
+    <div>
+      <h1>Welcome to the Home Page</h1>
+      <p>This is a simple paragraph on the home page.</p>
+          <About/>
+     
     </div>
   );
 };
