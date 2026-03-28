@@ -3,6 +3,15 @@ import About from './About'
 import Services from './Services'
 
 const Home = () => {
+  const [count, setCount] = useState(0);
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(data => setUsers(data));
+  }, []);
+
   return (
     <div>
       <h1>Welcome to the Home Page</h1>
@@ -11,7 +20,7 @@ const Home = () => {
           <Services/>
      
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

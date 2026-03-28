@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-const About = () => {
+const About = ({ name, role }) => {
   return (
-    <div>
-      <h1>About Us</h1>
-      <p>This is a simple paragraph on the about page.</p>
-      <button>Contact Us</button>
+    <div style={{ marginTop: "20px" }}>
+      <h2>About Section</h2>
+      <p>Name: {name}</p>
+      <p>Role: {role}</p>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
